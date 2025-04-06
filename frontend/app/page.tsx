@@ -16,7 +16,7 @@ export default function Home() {
     originalPrice: "",
   })
   const [result, setResult] = useState(null) // Result for estimated price
-  const [error, setError] = useState(null)
+  const [error, setError] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -45,9 +45,17 @@ export default function Home() {
 
       const data = await response.json();
       setResult(data.estimatedPrice);
-    } catch (err: any) {
-      setError(err.message);
-    } finally {
+      
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("An unknown error occurred");
+      }
+    }
+    
+    
+    finally {
       setIsLoading(false);
     }
   }
@@ -84,7 +92,7 @@ export default function Home() {
             <span className="text-green-500">Cache</span> Back 💰
           </h1>
           <p className="text-gray-600 mt-3 text-lg">
-            Want to estimate your closet's worth? Look no further!
+            Want to estimate your closet&#39;s worth? Look no further!
           </p>
         </div>
 
