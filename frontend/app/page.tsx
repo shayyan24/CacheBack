@@ -31,13 +31,13 @@ export default function Home() {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/estimate`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/estimate`, {
         method: "POST",
         headers: {
-            "Content-Type": "application/json",
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-    });
+      });
 
       if (!response.ok) {
         throw new Error("Failed to fetch the estimated price");
