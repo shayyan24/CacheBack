@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cache Back",
-  description: "Get some of your Cache (Cash) back, by using our online resell estimator to help sell your goods!",
+  title: "Cache Back 💰",
+  description: "Get some of your Cache (Cash) back, by using our online resale estimator to help sell your goods!",
 };
 
 export default function RootLayout({
