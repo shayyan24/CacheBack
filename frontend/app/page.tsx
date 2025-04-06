@@ -179,7 +179,7 @@ export default function Home() {
         {result && (
           <div className="glass-card rounded-2xl p-6 text-center">
             <Sparkles className="h-6 w-6 text-emerald-500 mx-auto mb-2" />
-            <h3 className="text-lg font-medium text-emerald-700 mb-1">Your item is worth</h3>
+            <h3 className="text-lg font-medium text-emerald-700 mb-1">The resale worth of your item is</h3>
             <p className="text-3xl font-bold text-emerald-800">${result}</p>
             <p className="text-sm text-emerald-600 mt-2">Based on current market trends</p>
           </div>
