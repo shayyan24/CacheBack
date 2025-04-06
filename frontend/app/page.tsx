@@ -3,15 +3,19 @@
 import type React from "react"
 
 import { useState } from "react"
-import { ArrowRight, DollarSign, ShoppingBag, Tag, Sparkles } from "lucide-react"
+
+// arrowright not used but here if needed
+import { ArrowRight, DollarSign, ShoppingBag, Tag, Sparkles, Shirt } from "lucide-react"
 
 export default function Home() {
+
+  // Form stuff
   const [formData, setFormData] = useState({
     brand: "",
     category: "",
     originalPrice: "",
   })
-  const [result, setResult] = useState(null)
+  const [result, setResult] = useState(null) // Result for estimated price
   const [error, setError] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
 
@@ -26,6 +30,7 @@ export default function Home() {
     setResult(null)
     setIsLoading(true)
 
+    // send a post req to api with the form data inputted from user
     try {
       const response = await fetch("http://localhost:5000/api/estimate", {
         method: "POST",
@@ -48,9 +53,9 @@ export default function Home() {
     }
   }
 
-  // Common categories for dropdown
+  // categories for dropdown
   const categories = [
-    "Select category",
+    "Select category", // initial text
     "Tops",
     "Dresses",
     "Pants",
@@ -64,10 +69,10 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-6">
       <div className="absolute top-10 right-10 floating">
-        <ShoppingBag className="h-16 w-16 text-emerald-500 opacity-20" />
+        <Shirt className="h-16 w-16 text-emerald-500 opacity-20" />
       </div>
       <div className="absolute bottom-10 left-10 floating" style={{ animationDelay: "2s" }}>
-        <Tag className="h-12 w-12 text-emerald-500 opacity-20" />
+        <ShoppingBag className="h-12 w-12 text-emerald-500 opacity-20" />
       </div>
 
       <div className="max-w-md w-full">
@@ -157,7 +162,7 @@ export default function Home() {
                 <span className="inline-block h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
               ) : (
                 <>
-                  Estimate Price <ArrowRight className="w-4 h-4" />
+                  Estimate Price 🤔 {/* Emoji on top always fr. but arrow here if needed : <ArrowRight className="w-4 h-4" /> */} 
                 </>
               )}
             </button>

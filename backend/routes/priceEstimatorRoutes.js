@@ -1,3 +1,5 @@
+// priceEstimatorRoutes.js: Defines the API route for estimating resale prices based on user input
+
 const express = require('express');
 const { calculateResalePrice } = require('../utils/priceLogic');
 

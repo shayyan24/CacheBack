@@ -1,3 +1,5 @@
+// Sets up the Express server and connects the price estimation API route
+
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
