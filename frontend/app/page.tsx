@@ -25,31 +25,30 @@ export default function Home() {
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setError(null)
-    setResult(null)
-    setIsLoading(true)
+    e.preventDefault();
+    setError(null);
+    setResult(null);
+    setIsLoading(true);
 
-    // send a post req to api with the form data inputted from user
     try {
-      const response = await fetch("http://localhost:5000/api/estimate", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/estimate`, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+            "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-      })
+    });
 
       if (!response.ok) {
-        throw new Error("Failed to fetch the estimated price")
+        throw new Error("Failed to fetch the estimated price");
       }
 
-      const data = await response.json()
-      setResult(data.estimatedPrice)
+      const data = await response.json();
+      setResult(data.estimatedPrice);
     } catch (err: any) {
-      setError(err.message)
+      setError(err.message);
     } finally {
-      setIsLoading(false)
+      setIsLoading(false);
     }
   }
 
