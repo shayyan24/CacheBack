@@ -6,7 +6,7 @@ Cache Back is a resale price estimator app designed to help users discover the h
 
 ## Demo
 
-Check out the live demo here: [Cache Back on Vercel](www.shayyanhusein.com)  
+Check out the live demo here: [Cache Back, Deployed using Vercel](https://cache-back-demo.vercel.app/)  
 
 ## How It Works
 
