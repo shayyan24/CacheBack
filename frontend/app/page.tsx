@@ -5,7 +5,7 @@ import type React from "react"
 import { useState } from "react"
 
 // arrowright not used but here if needed
-import { ArrowRight, DollarSign, ShoppingBag, Tag, Sparkles, Shirt } from "lucide-react"
+import {DollarSign, ShoppingBag, Tag, Sparkles, Shirt } from "lucide-react"
 
 export default function Home() {
 
