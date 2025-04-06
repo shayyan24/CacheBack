@@ -1,5 +1,7 @@
 # Cache Back 💰
 
+Ready to make some ~~Cash~~ Cache Back? 
+
 Cache Back is a resale price estimator app designed to help users discover the hidden value of their fashion items. By entering details like the brand, category, and original price of an item, users can get an estimated resale price instantly. The app is built with a modern tech stack, combining a **Next.js** frontend and a **Node.js** backend.
 
 ## Demo
