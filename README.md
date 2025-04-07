@@ -9,9 +9,6 @@ Cache Back is a resale price estimator app designed to help users discover the h
 This project is deployed on Vercel! Check out the live demo here: [Cache Back, Deployed using Vercel](https://cache-back-demo.vercel.app/)  
 
 
-
-   }
-
  **What to Input?**: 
      - **Brand**: The brand of the item (e.g., Nike, Gucci).
      - **Category**: The type of item (e.g., Shoes, Tops, Accessories).
