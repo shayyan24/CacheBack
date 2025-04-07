@@ -15,14 +15,14 @@ function calculateResalePrice(brand, category, originalPrice) {
     const brandMultipliers = {
         "nike": 1.15,
         "adidas": 1.0,
-        "gucci": 1.5,
-        "prada": 1.4,
+        "gucci": 1.2,
+        "prada": 1,
         "zara": 0.8,
         "h&m": 0.7,
         "puma": 0.7,
-        "louis vuitton": 1.6,
-        "supreme": 1.3,
-        "chanel": 1.7,
+        "louis vuitton": 1.3,
+        "supreme": 1.6,
+        "chanel": 1.2,
         "other": 1.0
 };
 
