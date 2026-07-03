@@ -24,25 +24,6 @@ This project is deployed on Vercel! Check out the live demo here: [Cache Back, D
        "brand": "Nike",
        "category": "Shoes",
        "originalPrice": 100
-
-### **How the Resale Price is Calculated**
-The resale price is calculated using the item's **category** and **brand**:
-
-1. **Category Discounts**:
-   - Each category has a predefined discount rate representing how much value the item retains. For example:
-     - Shoes: 90%
-     - Dresses: 50%
-     - Accessories: 80%
-
-2. **Brand Multipliers**:
-   - Popular brands like Nike, Gucci, and Louis Vuitton have higher multipliers to reflect their higher resale value.
-   - Lower-tier brands like Zara and H&M have lower multipliers.
-
-3. **Formula**:
-   - Resale Price = Original Price × Category Discount × Brand Multiplier
-
- **Result Display**:
-   - The estimated resale price is returned by the backend and displayed on the frontend.
-   - If an error occurs (e.g., missing fields or server issues), an error message is shown.
+   }
 
 Thank you for checking out Cache Back!
